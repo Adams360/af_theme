@@ -1,0 +1,68 @@
+/* Buttons */
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    font-size: 1rem;
+
+
+    &--cta {
+        background-color: $brand-light;
+        color: $brand-100;
+        border-radius: 8px;
+        padding: 22px 38px;
+        line-height: 1;
+    }
+
+    &--link {
+        position: relative;
+        background-color: transparent;
+        color: $brand-light;
+        line-height: 1.5;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+        }
+
+        &::before {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: currentColor;
+        }
+
+        &::after {
+            right: -25px;
+            top: 50%;
+            transform: translateY(-50%) translateX(0);
+            width: 15px;
+            height: 15px;
+            background-image: url(../../assets/img/btn-arrow.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            animation: moveArrow .6s ease-in-out alternate infinite paused;
+            
+        }
+
+        &:hover {
+            &::after {
+                animation-play-state: running;
+            }
+        }
+    }
+}
