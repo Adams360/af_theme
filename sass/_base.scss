@@ -13,27 +13,24 @@ body {
 .container {
     width: 100%;
     margin: 0 auto;
-    padding: 0 22px;
+    padding: 0 24px;
 
     @include sm-up {
         max-width: 540px;
     }
 
     @include md-up {
-        max-width: 720px;
+        max-width: 990px;
     }
 
     @include lg-up {
-        max-width: 960px;
-    }
-
-    @include xl-up {
         max-width: 1140px;
     }
 
-    @include xxl-up {
-        max-width: 1533.5px;
+    @include xl-up {
+        max-width: 1440px;
     }
+
 }
 
 ul {
